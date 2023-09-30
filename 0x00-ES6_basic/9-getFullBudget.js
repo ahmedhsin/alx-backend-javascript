@@ -3,10 +3,10 @@ export default function getBudgetObject(income, gdp, capita) {
     income,
     gdp,
     capita,
-    getIncomeInDollars(inc) {
+    getIncomeInDollars: function(inc) {
       return `$${inc}`;
     },
-    getIncomeInEuros(inc) {
+    getIncomeInEuros: function(inc) {
       return `${inc} euros`;
     },
 
