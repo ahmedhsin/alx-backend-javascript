@@ -3,11 +3,11 @@ export default function getBudgetObject(income, gdp, capita) {
     income,
     gdp,
     capita,
-    getIncomeInDollars() {
-      return `$${this.income}`;
+    getIncomeInDollars(inc) {
+      return `$${inc}`;
     },
-    getIncomeInEuros() {
-      return `${this.income} euros`;
+    getIncomeInEuros(inc) {
+      return `${inc} euros`;
     },
 
   };
