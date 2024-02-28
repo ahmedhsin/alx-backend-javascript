@@ -28,8 +28,13 @@ function countStudents(path, res) {
       delete departs.field;
       num -= 1;
       res.write(`Number of students: ${num}\n`);
+      let len = Object.keys(departs).length;
       for (const [key, value] of Object.entries(departs)) {
-        const cont = `Number of students in ${key}: ${value.length}. List: ${value.join(', ')}\n`;
+        let cont = `Number of students in ${key}: ${value.length}. List: ${value.join(', ')}`;
+        if (len !== 1) {
+          cont += '\n';
+        }
+        len -= 1;
         res.write(cont);
       }
       resolve();
