@@ -51,6 +51,8 @@ const app = http.createServer((req, res) => {
     res.write('This is the list of our students\n');
     countStudents(process.argv[2], res).then(() => {
       res.end();
+    }).catch((err) => {
+      res.end(err.message);
     });
   }
 });
