@@ -51,9 +51,9 @@ app.get('/', (req, res) => {
 app.get('/students', (req, res) => {
   res.write('This is the list of our students\n');
   countStudents(process.argv[2], res).then(() => {
-    res.send();
+    res.end();
   }).catch((err) => {
-    res.send(err.message);
+    res.end(err.message);
   });
 });
 app.listen(1245);
