@@ -26,7 +26,7 @@ function countStudents(path) {
   });
   delete departs.field;
   num -= 1;
-  console.log(`Number of students: ${num}`)
+  console.log(`Number of students: ${num}`);
   for (const [key, value] of Object.entries(departs)) {
     console.log(`Number of students in ${key}: ${value.length}. List: ${value.join(', ')}`);
   }
