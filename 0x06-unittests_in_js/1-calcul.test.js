@@ -1,5 +1,4 @@
 const calculateNumber = require("./1-calcul.js");
-console.log(calculateNumber)
 const assert = require("assert")
 describe("test type sum", () => {
     const sum = 'SUM';
